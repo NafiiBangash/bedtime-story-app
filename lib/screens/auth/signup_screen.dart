@@ -4,7 +4,7 @@ import 'package:bedtime_stories/utils/app_colors.dart';
 import 'package:bedtime_stories/widgets/top_bar.dart';
 import 'package:flutter/material.dart';
 
-import '../widgets/option_button.dart';
+import '../../widgets/option_button.dart';
 import 'signup_screen.dart';
 
 class SignupScreen extends StatefulWidget {

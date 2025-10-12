@@ -1,9 +1,9 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
-import '../utils/app_colors.dart';
-import '../widgets/textfield_widget.dart';
-import '../widgets/top_bar.dart';
+import '../../utils/app_colors.dart';
+import '../../widgets/textfield_widget.dart';
+import '../../widgets/top_bar.dart';
 
 class SignupWithMail extends StatefulWidget {
   const SignupWithMail({Key? key}) : super(key: key);

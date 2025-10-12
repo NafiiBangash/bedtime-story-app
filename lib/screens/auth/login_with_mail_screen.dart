@@ -1,4 +1,4 @@
-import 'package:bedtime_stories/screens/signup_screen.dart';
+import 'package:bedtime_stories/screens/auth/signup_screen.dart';
 import 'package:bedtime_stories/utils/app_colors.dart';
 import 'package:bedtime_stories/widgets/textfield_widget.dart';
 import 'package:bedtime_stories/widgets/top_bar.dart';

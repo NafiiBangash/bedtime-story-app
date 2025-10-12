@@ -1,13 +1,11 @@
-import 'package:bedtime_stories/screens/forget_password_screen.dart';
+import 'package:bedtime_stories/screens/auth/forget_password_screen.dart';
+import 'package:bedtime_stories/screens/home/network_error_screen.dart';
 import 'package:bedtime_stories/screens/navigation_bar.dart';
-import 'package:bedtime_stories/screens/login_screen.dart';
-import 'package:bedtime_stories/screens/login_with_mail_screen.dart';
+import 'package:bedtime_stories/screens/auth/login_screen.dart';
 import 'package:bedtime_stories/screens/onboarding_screen.dart';
-import 'package:bedtime_stories/screens/reset_password_screen.dart';
-import 'package:bedtime_stories/screens/reset_success_screen.dart';
+import 'package:bedtime_stories/screens/auth/reset_password_screen.dart';
 import 'package:bedtime_stories/screens/select_role_screen.dart';
-import 'package:bedtime_stories/screens/signup_screen.dart';
-import 'package:bedtime_stories/screens/signup_with_mail.dart';
+import 'package:bedtime_stories/screens/auth/signup_screen.dart';
 import 'package:bedtime_stories/screens/splash_screen.dart';
 import 'package:flutter/material.dart' hide NavigationBar;
 
@@ -30,7 +28,7 @@ class MyApp extends StatelessWidget {
           side: const BorderSide(color: Colors.white, width: 1), // 👈 white border
         ),
       ),
-      home: const NavigationBar(),
+      home: const NetworkErrorScreen(),
     );
   }
 }

@@ -1,5 +1,5 @@
-import 'package:bedtime_stories/screens/login_screen.dart';
-import 'package:bedtime_stories/screens/signup_screen.dart';
+import 'package:bedtime_stories/screens/auth/login_screen.dart';
+import 'package:bedtime_stories/screens/auth/signup_screen.dart';
 import 'package:bedtime_stories/utils/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';

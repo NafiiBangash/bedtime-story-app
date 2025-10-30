@@ -1,3 +1,4 @@
+import 'package:bedtime_stories/widgets/profile_info_container.dart';
 import 'package:flutter/material.dart';
 
 class ProfileScreen extends StatefulWidget {
@@ -66,6 +67,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
             ),
             SizedBox(height: 40,),
             Stack(
+              clipBehavior: Clip.none,
               children: [
                 Container(
                   height: 80,
@@ -82,27 +84,40 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   ),
                   child: Image.asset('assets/images/profile.png',fit: BoxFit.cover,),
                 ),
-                Container(
-                  height: 24,
-                  width: 24,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(12),
-                    gradient: const LinearGradient(
-                      colors: [Color(0xff2E2F55), Color(0xff23253C)],
+                Positioned(
+                  right: -10,
+                  top: 28,
+                  child: Container(
+                    height: 24,
+                    width: 24,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(12),
+                      gradient: const LinearGradient(
+                        colors: [Color(0xff2E2F55), Color(0xff23253C)],
+                      ),
+                      border: Border.all(color: Colors.white, width: 1),
                     ),
-                    border: Border.all(color: Colors.white, width: 1),
-                  ),
-                  alignment: const Alignment(0, -0.2),
-                  child: Image.asset(
-                    'assets/icons/camera.png',
-                    height: 11,
-                    width: 11,
-                    fit: BoxFit.contain, // ensures proportional scaling
+                    alignment: const Alignment(0, -0.2),
+                    child: Image.asset(
+                      'assets/icons/camera.png',
+                      height: 11,
+                      width: 11,
+                      fit: BoxFit.contain, // ensures proportional scaling
+                    ),
                   ),
                 )
 
               ],
             ),
+            const SizedBox(height: 20),
+            Text('Nafees Rehman',style: TextStyle(color: Colors.white,fontSize: 22,fontWeight: FontWeight.bold),),
+            Text('nafeesrehman@123',style: TextStyle(color: Colors.white),),
+            const SizedBox(height: 50),
+            ProfileInfoContainer(iconUrl: 'assets/icons/person_y.png', title: 'Nafees Rehman'),
+            const SizedBox(height: 20),
+            ProfileInfoContainer(iconUrl: 'assets/icons/sms_y.png', title: 'nafeesreh@123'),
+            const SizedBox(height: 20),
+            ProfileInfoContainer(iconUrl: 'assets/icons/mdi_face-man.png', title: 'father'),
           ],
         ),
       ),

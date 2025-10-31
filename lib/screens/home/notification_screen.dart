@@ -33,34 +33,41 @@ class _NotificationScreenState extends State<NotificationScreen> {
                   margin: const EdgeInsets.only(bottom: 12),
                   padding: const EdgeInsets.all(12),
                   decoration: BoxDecoration(
-                    color: const Color(0xFF113DAD).withOpacity(0.8),
+                    color: Colors.white.withOpacity(0.2),
                     borderRadius: BorderRadius.circular(12),
-                    border: Border.all(color: Colors.white.withOpacity(0.2)),
+                    border: Border.all(color: Colors.white,width: 0.5),
                   ),
                   child: Row(
                     children: [
-                      CircleAvatar(
-                        radius: 25,
-                        backgroundImage: AssetImage(_notificaitons[index].imageUrl!),
-                      ),
+                     Container(
+                       height: 45,
+                       width: 45,
+                       decoration: BoxDecoration(
+                         borderRadius: BorderRadius.circular(6),
+                         border: Border.all(
+                           color: Colors.white,
+                           width: 0.87
+                         )
+                       ),
+                       child: Image.asset(_notificaitons[index].imageUrl!,fit: BoxFit.cover,),
+                     ),
                       const SizedBox(width: 12),
                       Expanded(
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text(
-                              _notificaitons[index].title!,
+                              '${_notificaitons[index].msg!}\nBy ${_notificaitons[index].name!}',
                               style: const TextStyle(
                                 color: Colors.white,
                                 fontSize: 14,
                                 fontWeight: FontWeight.w600,
                               ),
                             ),
-                            const SizedBox(height: 5),
                             Text(
                               _notificaitons[index].time!,
                               style: TextStyle(
-                                color: Colors.white.withOpacity(0.6),
+                                color: Colors.white,
                                 fontSize: 12,
                               ),
                             ),

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class StoryDetailPage extends StatelessWidget {
-  const StoryDetailPage({super.key});
+class StoryDetailScreen extends StatelessWidget {
+  const StoryDetailScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -30,17 +30,18 @@ class StoryDetailPage extends StatelessWidget {
                 Positioned(
                   top: 40,
                   right: 20,
-                  child: Container(
-                    height: 36,
-                    width: 36,
-                    decoration: BoxDecoration(
-                      color: Colors.white.withOpacity(0.25),
-                      borderRadius: BorderRadius.circular(18),
-                      border: Border.all(color: Colors.white, width: 1),
-                    ),
-                    child: const Icon(Icons.volume_up_rounded,
-                        color: Colors.white, size: 20),
-                  ),
+                  child: Row(
+                    children: [
+                      Container(
+                        height: 45,
+                        width: 46,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10),
+                          color: Colors.white.withOpacity(0.1)
+                        ),
+                      )
+                    ],
+                  )
                 ),
                 Positioned(
                   bottom: 30,

@@ -29,8 +29,10 @@ class StoryDetailScreen extends StatelessWidget {
                 ),
                 Positioned(
                   top: 40,
-                  right: 20,
+                  right: 25,
+                  left: 25,
                   child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Container(
                         height: 45,
@@ -39,7 +41,14 @@ class StoryDetailScreen extends StatelessWidget {
                           borderRadius: BorderRadius.circular(10),
                           color: Colors.white.withOpacity(0.1)
                         ),
-                      )
+                        child: Center(
+                          child: Image.asset('assets/icons/arrow.png',height: 26,width: 26,fit: BoxFit.cover,),
+                        ),
+                      ),
+
+                      Image.asset('assets/icons/downlaod.png',height: 38,width: 38,fit: BoxFit.cover,)
+
+
                     ],
                   )
                 ),

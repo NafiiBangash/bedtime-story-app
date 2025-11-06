@@ -14,7 +14,7 @@ class StoryDetailScreen extends StatelessWidget {
             Stack(
               children: [
                 Container(
-                  height: 280,
+                  height: 375,
                   width: double.infinity,
                   decoration: BoxDecoration(
                     borderRadius: const BorderRadius.only(
@@ -145,22 +145,21 @@ class StoryDetailScreen extends StatelessWidget {
             const SizedBox(height: 10),
 
             // Play button
-            Container(
-              height: 65,
-              width: 65,
-              decoration: const BoxDecoration(
-                shape: BoxShape.circle,
-                gradient: LinearGradient(
-                  colors: [
-                    Color(0xffFFCF53),
-                    Color(0xffFF9900),
-                  ],
-                  begin: Alignment.topRight,
-                  end: Alignment.bottomLeft,
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Image.asset('assets/icons/reverse.png',height: 24,width: 24,fit: BoxFit.cover,),
+                SizedBox(width: 15,),
+                Container(
+                  height: 80,
+                  width: 80,
+                  decoration: const BoxDecoration(
+                    image: DecorationImage(image: AssetImage('assets/icons/play.png'),fit: BoxFit.cover)
+                  ),
                 ),
-              ),
-              child: const Icon(Icons.play_arrow_rounded,
-                  color: Colors.white, size: 40),
+                SizedBox(width: 15,),
+                Image.asset('assets/icons/forward.png',height: 24,width: 24,fit: BoxFit.cover,),
+              ],
             ),
 
             const SizedBox(height: 40),
